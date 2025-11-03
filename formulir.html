@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FORMULIR</title>
+        <link rel ="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+           
+            <h1 style="color :rgb(73, 188, 150);">WELCOME TO MY WEB</h1>
+            <nav class="menu-nav">
+                <a href="smantic.html">home</a>
+                <a href="formulir.html">formulir</a>
+                <a href="index.html">profilku</a>
+            </nav>
+        </header>
+        <h3>SELAMAT DATANG DI SIMULASI INPUT DATA PRIBADI</h3>
+        <p>masukkan data anda sesuai aturan yang berlaku</p>
+        <br>
+        <hr>
+        <br>
+        <form action="/proses" method="post">
+            
+            <label for="nama"> Nama : </label>
+            <input type="text" id="nama" name="nama" placeholder="masukkan nama"><br><br>
+            
+            <label for="email" > Email :</label>
+            <input type="email" id="email" name="email" placeholder="masukkan email"><br><br>
+            
+            <label for="password"> Password :</label>
+            <input type="password" id="password" name="password" placeholder="masukkan password"><br><br>
+            
+            <label for="keahlian"> Keahlian :</label><br><br>
+            <input type="checkbox" id="keahlian" name="keahlian" value="ngoding">ngoding<br>
+            <input type="checkbox" id="keahlian" name="keahlian" value="desain grafis">desain grafis<br>
+            <input type="checkbox" id="keahlian" name="keahlian" value="cyber security">cyber security<br><br>
+            
+            <label for="posisi"> posisi sekarang : </label><br><br>
+            <input type="radio" id="posisi" name="posisi" value="pelajar">pelajar<br>
+            <input type="radio" id="posisi" name="posisi" value="mahasiswa">mahasiswa<br>
+            <input type="radio" id="posisi" name="posisi" value="karyawan">karyawan<br><br>
+            
+            <label for="gender"> jenis kelamin : </label>
+            <select id="gender" name="gender">
+                <option value="laki-laki">laki-laki</option>
+                <option value="perempuan">perempuan</option>
+            </select><br><br>
+            <input type="submit" value="kirim">
+
+
+
+        </form>
+
+    </body>
+</html>
+<a href="smantic.html">home</a>
