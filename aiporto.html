@@ -2,139 +2,214 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portofolio A Pajar Eko Putra</title>
   <style>
+    :root {
+      --bg-color: #f4f4f4;
+      --text-color: #333;
+      --card-bg: #fff;
+      --primary-color: #2c3e50;
+      --accent-color: #3498db;
+      --hover-color: #1abc9c;
+    }
+
+    body.dark-mode {
+      --bg-color: #1e1e1e;
+      --text-color: #f4f4f4;
+      --card-bg: #2c2c2c;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
     }
 
     header {
-      background-color: #2c3e50;
-      color: white;
+      background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+      color: rgb(255, 255, 255);
       padding: 40px 20px;
       text-align: center;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: var(--card-bg);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+      z-index: 1000;
     }
 
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--hover-color);
+    }
+
+    .toggle-btn {
+      cursor: pointer;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 5px 100px;
+      border-radius: 5px;
     }
 
     .container {
-      max-width: 900px;
-      margin: 40px auto;
+      max-width: 1000px;
+      margin: 30px auto;
       padding: 0 20px;
     }
 
     .card {
-      background-color: white;
+      background-color: var(--card-bg);
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 30px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      padding: 20px;
+      margin-bottom: 30px;
     }
 
     .section-title {
       font-size: 1.5em;
+      margin-bottom: 15px;
+      border-left: 5px solid var(--accent-color);
+      padding-left: 10px;
+    }
+
+    .tabs {
+      display: flex;
       margin-bottom: 20px;
-      color: #2c3e50;
-      border-bottom: 2px solid #3498db;
-      display: inline-block;
-      padding-bottom: 5px;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
+    .tabs button {
+      flex: 1;
+      padding: 10px;
+      cursor: pointer;
+      background-color: var(--card-bg);
+      border: 1px solid var(--accent-color);
+      color: var(--primary-color);
     }
 
-    ul li {
+    .tabs button.active {
+      background-color: var(--accent-color);
+      color: white;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .progress {
+      background-color: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
       margin-bottom: 10px;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #2c3e50;
+    .progress-bar {
+      height: 20px;
+      background-color: var(--accent-color);
+      text-align: right;
+      padding-right: 5px;
       color: white;
-      margin-top: 40px;
-    }
-
-    a {
-      color: #3498db;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    a:hover {
-      color: #1abc9c;
+      line-height: 20px;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>A Pajar Eko Putra</h1>
     <p>Mahasiswa Teknik Informatika | Backend Developer Enthusiast</p>
   </header>
 
+  <nav>
+    <div>
+      #biodataBiodata</a>
+      #tentangTentang</a>
+      #skillSkill</a>
+      #proyekProyek</a>
+    </div>
+    <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Mode Gelap</button>
+  </nav>
+
   <div class="container">
-    <div class="card">
+    <div class="card" id="biodata">
       <h2 class="section-title">Biodata</h2>
       <ul>
         <li><strong>Nama:</strong> A Pajar Eko Putra</li>
         <li><strong>Tempat, Tanggal Lahir:</strong> [Isi sesuai data]</li>
         <li><strong>Alamat:</strong> [Isi sesuai data]</li>
-        <li><strong>Email:</strong> mailto:email@example.comemail@example.com</a></li>
+        <li><strong>Email:</strong> email@example.com</li>
         <li><strong>Telepon:</strong> [Isi sesuai data]</li>
         <li><strong>Universitas:</strong> UIN Syarif Hidayatullah Jakarta</li>
         <li><strong>Program Studi:</strong> Teknik Informatika</li>
       </ul>
     </div>
 
-    <div class="card" style="margin-top: 30px;">
+    <div class="card" id="tentang">
       <h2 class="section-title">Tentang Saya</h2>
       <p>Saya adalah mahasiswa baru yang sedang mendalami dunia pemrograman, khususnya di bidang backend development. Saya memiliki semangat belajar tinggi dan tertarik pada teknologi modern seperti Flutter, Java, dan pengembangan web. Saya juga memiliki minat dalam desain UI/UX dan ingin menjadi developer yang profesional dan kreatif.</p>
     </div>
 
-    <div class="card" style="margin-top: 30px;">
+    <div class="card" id="skill">
       <h2 class="section-title">Skill</h2>
-      <ul>
-        <li>HTML, CSS, JavaScript (Dasar)</li>
-        <li>Java (OOP, File Handling, Exception)</li>
-        <li>Dart & Flutter (Dasar)</li>
-        <li>Python (Dasar)</li>
-        <li>Git & GitHub</li>
-      </ul>
+      <div class="progress"><div class="progress-bar" style="width: 80%">HTML/CSS</div></div>
+      <div class="progress"><div class="progress-bar" style="width: 70%">Java</div></div>
+      <div class="progress"><div class="progress-bar" style="width: 60%">Flutter</div></div>
+      <div class="progress"><div class="progress-bar" style="width: 50%">Python</div></div>
+      <div class="progress"><div class="progress-bar" style="width: 65%">Git & GitHub</div></div>
     </div>
 
-    <div class="card" style="margin-top: 30px;">
-      <h2 class="section-title">Kontak & Sosial Media</h2>
-      <ul>
-        <li><strong>LinkedIn:</strong> #linkedin.com/in/apajar</a></li>
-        <li><strong>GitHub:</strong> #github.com/apajar</a></li>
-        <li><strong>Instagram:</strong> #instagram.com/apajar</a></li>
-      </ul>
+    <div class="card" id="proyek">
+      <h2 class="section-title">Proyek</h2>
+      <div class="tabs">
+        <button class="tablink active" onclick="openTab(event, 'tab1')">Website Profil</button>
+        <button class="tablink" onclick="openTab(event, 'tab2')">Aplikasi Flutter</button>
+        <button class="tablink" onclick="openTab(event, 'tab3')">Sistem Informasi</button>
+      </div>
+      <div id="tab1" class="tab-content active">
+        <p>Membuat website portofolio pribadi menggunakan HTML, CSS, dan JavaScript.</p>
+      </div>
+      <div id="tab2" class="tab-content">
+        <p>Membuat aplikasi mobile sederhana menggunakan Flutter untuk manajemen tugas.</p>
+      </div>
+      <div id="tab3" class="tab-content">
+        <p>Membuat sistem informasi akademik berbasis web menggunakan Java dan MySQL.</p>
+      </div>
     </div>
   </div>
 
   <footer>
-    &copy; 2025 A Pajar Eko Putra. All rights reserved.
+    <p>&copy; 2025 A Pajar Eko Putra. All rights reserved.</p>
   </footer>
 
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    function openTab(evt, tabName) {
+      const tabs = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tablink');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+      document.getElementById(tabName).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+  </script>
 </body>
 </html>

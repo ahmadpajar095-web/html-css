@@ -1,0 +1,32 @@
+
+
+.div1  {
+    
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    height: 60px;
+    background-color: lightblue;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 200px 60px ;
+    
+}
+
+.div1 a {
+    text-decoration: none;
+    color: rgb(141, 101, 101);
+    font-size: 20px;
+    border: 2px solid rgb(160, 212, 230);
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px 50px;
+
+}
+
+.div1 a:hover {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border-radius: 10px;
+}

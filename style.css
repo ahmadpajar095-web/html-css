@@ -87,3 +87,18 @@ margin:10px;}
     align-items: center;
     justify-content: center;
 }
+
+.mainmenu a {
+    display: inline-block;
+    color:#178582 ;
+    text-decoration: none; /* opsional: hilangkan garis bawah */
+    font-size: 25px;
+    padding: 6px 15px;
+    background-color:#112236 ;
+    margin: 10px;   
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
