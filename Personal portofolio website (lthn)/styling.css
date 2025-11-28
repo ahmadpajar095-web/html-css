@@ -21,7 +21,25 @@
     transition: 0.3s ease;
     
 }
+div {
 
+}
+
+h1 {
+    font-size: 40px;
+    color: #178582;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: #2f5379;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 .mainmenu {
     text-align: center;
     padding: 20px;

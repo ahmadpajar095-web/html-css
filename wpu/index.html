@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "aside main main"
+            "nav main main"
+            "footer footer footer";
+        grid-template-rows: 1fr 15fr 15fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 1080px;
+        gap: 0.5px;
+    }
+    header {
+        grid-area: header;
+        background-color: lightblue;
+        padding: 0%;
+        margin: 0%;
+    }
+    aside {
+        grid-area: aside;
+        background-color: lightblue;
+        padding: 0%;
+        margin: 0%;
+    }
+    nav {
+        grid-area: nav;
+        background-color: lightblue;
+        padding: 0%;
+        margin: 0%;
+    }
+    main {
+        grid-area: main;
+        background-color: lightblue;
+        padding: 0%;
+        margin: 0%;
+    }
+    footer {
+        grid-area: footer;
+        background-color: lightgray;
+        padding: 0%;
+        margin: 0%;
+    }
+    
+</style>
+<body>
+    <div class ="container">
+        <header>
+            <P>halo semuanya ini adalah sebuah tampilan grid sederhana <br> yang baru saja kupelajari</P>
+        </header>
+        <aside>aside</aside>
+        <nav>nav</nav>
+        <main>main</main>
+        <footer>footer</footer>
+        
+    </div>
+</body>
+</html>
